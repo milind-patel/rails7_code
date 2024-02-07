@@ -1,13 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Setup Steps
+rails new catalogue_cleanser --database=postgresql
+rvm gemset use rails7  
+bundle install  
+git add . 
+git commit -m "initial commit"
+git push -f origin main
 
-Things you may want to cover:
+* Ruby version - rvm use 3.2.2 
 
-* Ruby version
-
-* System dependencies
+* System dependencies 
 
 * Configuration
 
