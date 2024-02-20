@@ -31,10 +31,10 @@ jobs:
       # Add or replace database setup steps here
       - name: Start Postgres Service
         run: sudo systemctl start postgresql.service
-        - run: |
-              createuser postgres
-              createdb --owner postgres rails_test
-              psql -c "ALTER USER postgres WITH PASSWORD 'password'"
+        run: |
+            createuser postgres
+            createdb --owner postgres rails_test
+            psql -c "ALTER USER postgres WITH PASSWORD 'password'"
       - name: Set up database schema
         run: bin/rails db:schema:load
       # Add or replace test runners here
