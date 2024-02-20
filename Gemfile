@@ -65,3 +65,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'roo', '~> 2.10', '>= 2.10.1'
+gem 'roo-xls', '~> 1.2'
+gem 'caxlsx', '~> 4.0'
+gem "google_drive"

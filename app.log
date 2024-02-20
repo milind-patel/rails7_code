@@ -1,0 +1,4 @@
+# Logfile created on 2024-02-15 09:16:01 +0900 by logger.rb/v1.5.3
+I, [2024-02-15T09:16:08.696304 #2994]  INFO -- : This is an info message
+W, [2024-02-15T09:16:11.634255 #2994]  WARN -- : This is a warning message
+E, [2024-02-15T09:16:14.525805 #2994] ERROR -- : This is an error message
