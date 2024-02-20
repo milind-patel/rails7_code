@@ -14,8 +14,8 @@ jobs:
           - "5432:5432"
         env:
           POSTGRES_DB: catalogue_cleanser_development
-          POSTGRES_USER: righton
-          POSTGRES_PASSWORD: rightonDB
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: 
     env:
       RAILS_ENV: development
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
@@ -29,6 +29,8 @@ jobs:
           bundler-cache: true
           ruby-version: 3.2.2
       # Add or replace database setup steps here
+      - name: Start Postgres Service
+        run: sudo systemctl start postgresql.service
       - name: Set up database schema
         run: bin/rails db:schema:load
       # Add or replace test runners here
@@ -52,3 +54,5 @@ jobs:
         run: bin/brakeman -q -w2
       - name: Lint Ruby files
         run: bin/rubocop --parallel
+      - name: Start Postgres Service
+        run: sudo systemctl start postgresql.service
